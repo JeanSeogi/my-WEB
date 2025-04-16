@@ -62,7 +62,10 @@
               <th>계약일</th><th>입주일</th><th>만기일</th><th>기간</th>
               <th>구분</th><th>형태</th><th>지불</th>
               <th>보증금</th><th>계약금</th><th>잔금</th><th>차임</th><th>관리</th><th>월납</th>
-              <th>성명</th><th>주민번호</th><th>전화</th><th>주소</th>
+              <th>성명</th><th>주민번호</th><th>전화</th>
+            </tr>
+            <tr>
+              <th>주소</th>
             </tr>
           </thead>
           <tbody>
@@ -97,6 +100,8 @@
                 <td><xsl:value-of select="성명"/></td>
                 <td class="주민번호"><xsl:value-of select="주민번호"/></td>
                 <td class="전화번호"><xsl:value-of select="전화번호"/></td>
+              </tr>
+              <tr>
                 <td class="text"><xsl:value-of select="주소"/></td>
               </tr>
             </xsl:for-each>
