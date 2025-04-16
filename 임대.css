@@ -1,0 +1,58 @@
+body {
+    font-family: "Arial Narrow Bold", sans-serif;
+    margin: 30px;
+    background-color: #303030;
+}
+h2 {
+    text-align: left;
+    color: #4CAF50;
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0;
+    background-color: #303030;    /* 헤더와 같은 배경색 */
+    z-index: 1;
+}
+.table-container {
+    height: 75vh;                   /* 화면 높이의 80%로 설정 */
+    max-height: 90vh;               /* 최대 높이 제한 */
+    overflow-y: auto;               /* 세로 스크롤 활성화 */
+    background-color: white;
+}
+table {
+    border-collapse: collapse;
+    border: 2px solid #ddd;
+    width: 100%;
+}
+th, td {
+    border: 2px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+/* 첫 번째 헤더 행 고정 */
+thead tr:nth-child(1) th {        /*  first-child */
+    background-color: #4CAF50;
+    position: sticky;
+    top: 1;
+    z-index: 3;                   /* z-index 증가 */
+}
+/* 두 번째 헤더 행 고정 */
+thead tr:nth-child(2) th {
+    background-color: #4CAF50;
+    position: sticky;
+    top: 43px;                    /* 첫 번째 행의 실제 높이에 맞춤 (8px padding-top + 8px padding-bottom + 24px 내용 높이) */
+    z-index: 3;                   /* 첫 번째 행과 동일한 z-index */
+}
+/* 테이블 헤더 셀 높이 고정 */
+thead th {
+    height: 42px;                 /* 명시적 높이 설정 */
+    vertical-align: middle;       /* 내용 수직 정렬 */
+}
+/* 교차무늬 적용 */
+tbody tr:nth-child(4n+2),
+tbody tr:nth-child(4n+3) {
+    background-color:rgb(245, 245, 245);
+}
+/* 마우스 오버 효과 */
+.tr-hover {
+    background-color: rgb(189, 204, 179) !important;
+}
