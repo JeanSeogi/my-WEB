@@ -46,7 +46,7 @@
                   <td rowspan="2" class="number"><xsl:value-of select="format-number(관리, '#,###')"/></td>
                   <td rowspan="2" class="number"><xsl:value-of select="format-number(월납, '#,###')"/></td>
                   <td rowspan="2"               ><xsl:value-of select="성명"/></td>
-                  <td             class="nowrap"><xsl:value-of select="주민번호"/></td>
+                  <td             class="nowrap"><xsl:value-of select="format-number(보증금, '#,###')"/></td>
                   <td rowspan="2" class="text"  ><xsl:value-of select="주소"/></td>
                 </tr>
                 <tr class="record-row2">
@@ -54,7 +54,7 @@
                   <td                           ><xsl:value-of select="형태"/></td>
                   <td                           ><xsl:value-of select="지불"/></td>
                   <td             class="number"><xsl:value-of select="format-number(잔금, '#,###')"/></td>
-                  <td             class="nowrap"><xsl:value-of select="전화번호"/></td>
+                  <td             class="nowrap"><xsl:value-of select="format-number(보증금, '#,###')"/></td>
                 </tr>
               </xsl:for-each>
             </tbody>
